@@ -2,20 +2,22 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 body {
-  background: #0f2027;
-  color: #fff;
   min-height: 100vh;
+  color: white;
+  overflow-x: hidden;
+  background: #0f2027;
 }
 
+/* FUNDO ANIMADO */
 .background {
   position: fixed;
   inset: 0;
-  background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
-  background-size: 400% 400%;
+  background: linear-gradient(270deg, #0f2027, #203a43, #2c5364);
+  background-size: 600% 600%;
   animation: bg 12s ease infinite;
   z-index: -1;
 }
@@ -26,69 +28,78 @@ body {
   100% { background-position: 0% 50%; }
 }
 
+/* HEADER */
 .header {
   text-align: center;
   padding: 40px 20px;
 }
 
+/* FOTO */
 .avatar {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
+  width: 180px;
+  height: 180px;
   object-fit: cover;
-  border: 4px solid #00e5ff;
-  box-shadow: 0 0 30px #00e5ff;
+  border-radius: 50%;
+  border: 4px solid #00f5ff;
+  box-shadow: 0 0 25px #00f5ff;
   margin-bottom: 15px;
 }
 
+/* TEXTO */
+h1 {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
 .subtitle {
-  color: #00e5ff;
-  margin-top: 10px;
+  font-size: 18px;
+  color: #00f5ff;
+  min-height: 22px;
 }
 
+/* CONTAINER */
 .container {
-  max-width: 900px;
-  margin: auto;
+  display: flex;
+  justify-content: center;
   padding: 20px;
 }
 
+/* CARD */
 .card {
-  background: rgba(0,0,0,0.4);
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(10px);
   border-radius: 16px;
-  padding: 20px;
-  margin-bottom: 20px;
+  padding: 25px;
+  max-width: 360px;
+  width: 100%;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
 }
 
 .card h2 {
-  color: #00e5ff;
+  color: #00f5ff;
+  margin-bottom: 15px;
+}
+
+.card p {
   margin-bottom: 10px;
+  font-size: 16px;
 }
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 10px;
-}
-
-.gallery img {
-  width: 100%;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.music-control {
+/* BOTÃO */
+#musicBtn {
   position: fixed;
-  bottom: 20px;
   right: 20px;
+  bottom: 20px;
+  background: #00f5ff;
+  color: #000;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 0 15px #00f5ff;
 }
 
-.music-control button {
-  background: linear-gradient(135deg, #00e5ff, #0066ff);
-  color: #fff;
-  border: none;
-  padding: 14px 20px;
-  border-radius: 30px;
-  cursor: pointer;
-  box-shadow: 0 0 20px rgba(0,229,255,0.7);
-  }
+#musicBtn:hover {
+  opacity: 0.85;
+}
