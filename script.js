@@ -1,29 +1,32 @@
 /* TEXTO DIGITANDO */
 const text = "Futuro programador 💻🚀";
-let i = 0;
+const typingElement = document.getElementById("typing");
 
-function typing() {
-  if (i < text.length) {
-    document.getElementById("typing").textContent += text[i];
-    i++;
-    setTimeout(typing, 100);
+let index = 0;
+
+function typeEffect() {
+  if (index < text.length) {
+    typingElement.innerHTML += text.charAt(index);
+    index++;
+    setTimeout(typeEffect, 80);
   }
 }
-typing();
+
+typeEffect();
 
 /* MÚSICA */
 const music = document.getElementById("music");
 const btn = document.getElementById("musicBtn");
 let playing = false;
 
-btn.addEventListener("click", () => {
+function toggleMusic() {
   if (!playing) {
     music.play();
-    btn.textContent = "⏸️ Pausar música";
+    btn.innerHTML = "⏸️ Pausar música";
     playing = true;
   } else {
     music.pause();
-    btn.textContent = "▶️ Tocar música";
+    btn.innerHTML = "▶️ Tocar música";
     playing = false;
   }
-});
+}
