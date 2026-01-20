@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0f2027;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.background {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+  background-size: 400% 400%;
+  animation: bg 12s ease infinite;
+  z-index: -1;
+}
+
+@keyframes bg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.header {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #00e5ff;
+  box-shadow: 0 0 30px #00e5ff;
+  margin-bottom: 15px;
+}
+
+.subtitle {
+  color: #00e5ff;
+  margin-top: 10px;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+.card {
+  background: rgba(0,0,0,0.4);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  color: #00e5ff;
+  margin-bottom: 10px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.music-control {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.music-control button {
+  background: linear-gradient(135deg, #00e5ff, #0066ff);
+  color: #fff;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(0,229,255,0.7);
+  }
